@@ -1,0 +1,24 @@
+:root {
+	--hero-bg: rgb(from var(--p-surface-100) r g b / 100%);
+	--hero-card-bg: rgb(from var(--p-surface-100) r g b / 50%);
+	--hero-card-border-color: rgb(from var(--p-primary-900) r g b / 50%);
+	--border-radius-rounded-hard: 3px;
+	--border-radius-rounded-soft: 8px;
+	
+	--navbar-ld-bg: rgb(from var(--p-primary-900) r g b / 10%);
+	
+	--card-bg: rgb(from var(--p-surface-500) r g b / 10%);
+}
+
+.dark-mode {
+	--hero-bg: rgb(19, 26, 52);
+	--hero-card-bg: rgb(from rgb(17, 25, 47) r g b / 50%);
+	--hero-card-border-color: rgb(from var(--p-primary-900) r g b / 50%);
+
+	--navbar-ld-bg: rgb(from var(--p-primary-900) r g b / 10%);
+
+	--border-radius-rounded-hard: 3px;
+	--border-radius-rounded-soft: 8px;
+
+	--card-bg: rgb(from var(--p-surface-500) r g b / 10%);
+}
