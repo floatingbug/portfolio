@@ -1,108 +1,145 @@
 <script setup>
+import {ref, reactive, onMounted} from "vue";
 import InputGroup from 'primevue/inputgroup';
 import InputGroupAddon from 'primevue/inputgroupaddon';
 import FloatLabel from 'primevue/floatlabel';
 import InputText from "primevue/inputtext";
 import Textarea from 'primevue/textarea';
+import {useTranslations} from "@/composables/useTranslations.js";
+import {sendMessage} from  "./helpers/sendMessage.js";
+import { RecaptchaV2 } from "vue3-recaptcha-v2";
 
+
+const {translation} = useTranslations();
+const contactData = reactive({
+	subject: "",
+	email: "",
+	message: ""
+});
+
+const captchaKey = ref(import.meta.env.VITE_CAPTCHA_KEY);
+
+
+onMounted(() => {
+	const script = document.createElement('script');
+	script.src = 'https://www.google.com/recaptcha/api.js';
+	script.async = true;
+	script.defer = true;
+
+	document.head.appendChild(script);
+});
+
+
+async function sendEmail(){
+	const token = grecaptcha.getResponse();
+
+	const data = await sendMessage({
+		subject: contactData.subject,
+		email: contactData.email,
+		message: contactData.message,
+		token
+	});
+
+	console.log(data);
+}
 </script>
 
 
 <template>
-	<div class="section-3-content">
-		<div class="top">
-			<h1>Contact</h1>
-		</div>
+	<div class="contact">
+		<header>
+			<h1>
+				{{translation.section3.header1}}
+			</h1>
+		</header>
 
-		<div class="mid">
-			<div class="top">
-				<InputGroup>
-					<InputGroupAddon>
-						<i class="pi pi-user"></i>
-					</InputGroupAddon>
-				
+		<main>
+			<div class="form">
+				<div class="top">
+					<InputGroup>
+						<InputGroupAddon>
+							<i class="pi pi-comment"></i>
+						</InputGroupAddon>
+					
+						<FloatLabel>
+							<InputText id="subject" v-model="contactData.subject"></InputText>
+							<label for="subject">Subject</label>
+						</FloatLabel>
+					</InputGroup>
+					
+					<InputGroup>
+						<InputGroupAddon>
+							<i class="pi pi-envelope"></i>
+						</InputGroupAddon>
+					
+						<FloatLabel>
+							<InputText id="email" v-model="contactData.email"></InputText>
+							<label for="email">E-Mail</label>
+						</FloatLabel>
+					</InputGroup>
+				</div>
+
+				<div class="mid">
 					<FloatLabel>
-						<InputText id="name"></InputText>
-						<label for="name">Name</label>
+						<Textarea id="message" v-model="contactData.message"></Textarea>
+						<label for="message">Message</label>
 					</FloatLabel>
-				</InputGroup>
+				</div>
 
-				<InputGroup>
-					<InputGroupAddon>
-						<i class="pi pi-envelope"></i>
-					</InputGroupAddon>
-				
-					<FloatLabel>
-						<InputText id="email"></InputText>
-						<label for="email">E-Mail</label>
-					</FloatLabel>
-				</InputGroup>
-			</div>
-			
-			<div class="bottom">
-				<InputGroup>
-					<InputGroupAddon>
-						<i class="pi pi-book"></i>
-					</InputGroupAddon>
-				
-					<Textarea></Textarea>
-				</InputGroup>
+				<div class="g-recaptcha" :data-sitekey="captchaKey"></div>
 
-				<Button label="Send Message"></Button>
+				<div class="bottom">
+					<div class="submit-button">
+						<Button @click="sendEmail">Send Message</Button>
+					</div>
+				</div>
 			</div>
-		</div>
+		</main>
 	</div>
 </template>
 
 
 <style scoped>
-.section-3-content {
-	width: 50%;
-	min-width: 280px;
-	border-radius: var(--border-radius-rounded-soft);
-	padding: 1rem;
-	background-color: var(--card-bg);
+.contact {
 }
 
-.top {
+header {
 	display: flex;
 	justify-content: center;
 }
 
-.mid {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2rem;
-}
-
-.mid .top, .bottom {
+main {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
 }
 
-.mid .top {
-	gap: 2rem;
-}
-
-.mid .bottom {
-	flex-direction: column;
-	gap: 2rem;
-}
-
-.mid .top .p-inputgroup {
-	flex: 1;
-	min-width: 280px;
-}
-
-.mid .bottom .p-inputgroup {
-	min-width: 280px;
-}
-
-.p-textarea {
+.form {
 	width: 100%;
-	resize: none;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+
+	.top {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.mid {
+		.p-textarea {
+			width: 100%;
+			min-height: 300px;
+		}
+	}
+
+	.bottom {
+		width: 100%;
+
+		.p-button {
+			width: 100%;
+		}
+	}
 }
 </style>

@@ -4,6 +4,7 @@ import { RouterLink, RouterView } from "vue-router";
 import TheNavbar from "./components/navbar/TheNavbar.vue";
 import { useUser } from "./store/useUser.js";
 import {useTranslations} from "./composables/useTranslations.js";
+import {device} from "./composables/device.js";
 
 
 const {userSettings} = useUser();
@@ -26,6 +27,17 @@ onMounted(async () => {
 		html.className = "dark-mode";
 		userSettings.isDarkMode = true;
 	}
+
+	//handle device size
+	device.size = "ld";
+	if(window.innerWidth < 1000) device.size = "md";
+	if(window.innerWidth < 500) device.size = "sd";
+
+	window.addEventListener("resize", () => {
+		device.size = "ld";
+		if(window.innerWidth < 1000) device.size = "md";
+		if(window.innerWidth < 500) device.size = "sd";
+	});
 });
 </script>
 

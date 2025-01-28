@@ -37,6 +37,11 @@ const toggle = (event) => {
 
 
 <template>
-    <Button type="button" icon="pi pi-language" variant="outlined" size="small" @click="toggle" aria-haspopup="true" aria-controls="overlay_menu" />
+    <Button type="button" icon="pi pi-language" severity="contrast" variant="outlined" size="small" @click="toggle" aria-haspopup="true" aria-controls="overlay_menu" />
     <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" />
 </template>
+
+
+<style scoped>
+
+</style>

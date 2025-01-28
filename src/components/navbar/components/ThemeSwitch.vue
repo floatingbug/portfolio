@@ -26,7 +26,7 @@ function handleChangeAction(isChecked) {
 		@update:modelValue="handleChangeAction"
 	>
 		<template #handle="{ checked }">
-			<i :class="{'pi pi-moon': checked, 'pi pi-sun': !checked}" style="font-size: .8rem;"></i>
+			<i :class="{'pi pi-moon': checked, 'pi pi-sun': !checked}" style="font-size: .8rem; line-height: 0;"></i>
 		</template>
 	</ToggleSwitch>
 </template>

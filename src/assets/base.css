@@ -2,23 +2,38 @@
 	--hero-bg: rgb(from var(--p-surface-100) r g b / 100%);
 	--hero-card-bg: rgb(from var(--p-surface-100) r g b / 50%);
 	--hero-card-border-color: rgb(from var(--p-primary-900) r g b / 50%);
+
+	--section-bg: white; 
+
 	--border-radius-rounded-hard: 3px;
 	--border-radius-rounded-soft: 8px;
+	--border-color: rgb(from var(--p-primary-color) r g b / 100%);
+	--border-color-light: rgb(from var(--p-surface-500) r g b / 30%);
 	
 	--navbar-ld-bg: rgb(from var(--p-primary-900) r g b / 10%);
+	--navbar-md-sd-bg: rgb(from var(--p-primary-900) r g b / 10%);
+	--navbar-md-sd-bg-dark: rgb(from var(--p-primary-500) r g b / 100%);
+	--navbar-border-color: rgb(from var(--p-primary-900) r g b / 100%);
 	
-	--card-bg: rgb(from var(--p-surface-500) r g b / 10%);
+	--card-bg: rgb(from var(--p-surface-200) r g b / 10%);
 }
 
 .dark-mode {
 	--hero-bg: rgb(19, 26, 52);
 	--hero-card-bg: rgb(from rgb(17, 25, 47) r g b / 50%);
 	--hero-card-border-color: rgb(from var(--p-primary-900) r g b / 50%);
+	
+	--section-bg: rgb(19, 26, 52);
 
 	--navbar-ld-bg: rgb(from var(--p-primary-900) r g b / 10%);
+	--navbar-md-sd-bg: rgb(from var(--p-primary-900) r g b / 50%);
+	--navbar-md-sd-bg-dark: rgb(from var(--p-primary-900) r g b / 100%);
+	--navbar-border-color: rgb(from var(--p-primary-200) r g b / 100%);
 
 	--border-radius-rounded-hard: 3px;
 	--border-radius-rounded-soft: 8px;
+	--border-color: rgb(from var(--p-primary-color) r g b / 100%);
+	--border-color-light: rgb(from var(--p-primary-color) r g b / 30%);
 
 	--card-bg: rgb(from var(--p-surface-500) r g b / 10%);
 }

@@ -56,7 +56,11 @@ const semantic = {
 				800: '{slate.800}',
 				900: '{slate.900}',
 				950: '{slate.950}'
-			}
+			},
+			formField: {
+				hoverBorderColor: "{primary.color}",
+				background: "{zinc.950}"
+			},
 		}
 	}
 }

@@ -1,54 +1,34 @@
 <script setup>
-import ThemeSwitch from "./components/ThemeSwitch.vue";
-import LanguageMenu from "./components/LanguageMenu.vue";
+import {ref} from "vue";
+import NavbarLd from "./components/NavbarLd.vue";
+import NavbarMd from "./components/NavbarMd.vue";
+import NavbarSd from "./components/NavbarSd.vue";
+import {device} from "@/composables/device.js";
+import NavbarToggleButton from "./components/NavbarToggleButton.vue";
+
+
+const isNavbarClosed = ref(true);
+
+
+function handleNavbarAction(event){
+	console.log("test", event);
+
+	if(event.action === "toggle"){
+		isNavbarClosed.value = !isNavbarClosed.value;
+	}
+	else if(event.action === "closeNavbar"){
+		isNavbarClosed.value = true;
+	}
+}
 
 </script>
 
 <template>
-	<div class="navbar-ld">
-		<div class="left">
-			<Button as="a" href="#hero" label="Home" variant="text" severity="secondary"></Button>
-			<Button as="a" href="#section-1" label="About" variant="text" severity="secondary"></Button>
-			<Button as="a" href="#section-2" label="Projects" variant="text" severity="secondary"></Button>
-			<Button as="a" href="#section-3" label="Contact" variant="text" severity="secondary"></Button>
-		</div>
-
-		<div class="mid"></div>
-
-		<div class="right">
-			<ThemeSwitch></ThemeSwitch>
-			<LanguageMenu></LanguageMenu>
-		</div>
-	</div>
+	<NavbarLd v-if="device.size === 'ld'"></NavbarLd>
+	<NavbarMd v-if="device.size === 'md'" :isNavbarClosed="isNavbarClosed" @toggle:action="handleNavbarAction"></NavbarMd>
+	<NavbarSd v-if="device.size === 'sd'" :isNavbarClosed="isNavbarClosed" @toggle:action="handleNavbarAction"></NavbarSd>
+	<NavbarToggleButton v-if="!(device.size === 'ld') && isNavbarClosed === true" @toggle:action="handleNavbarAction"></NavbarToggleButton>
 </template>
 
 <style scoped>
-.navbar-ld {
-	width: 100%;
-	height: 50px;
-	position: fixed;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 1rem;
-	background-color: var(--navbar-ld-bg);
-	backdrop-filter: blur(10px);
-	z-index: 1000;
-}
-
-.navbar-ld > div {
-	height: 100%;
-	display: flex;
-	align-items: center;
-}
-
-
-.navbar-ld .right {
-	display: flex;
-	gap: 1rem;
-}
-
-.navbar-ld .left a {
-	text-decoration: none;
-	font-size: 1.2rem;
-}
 </style>

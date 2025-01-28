@@ -2,7 +2,6 @@
 const props = defineProps({
 	chartData: Array
 });
-
 </script>
 
 

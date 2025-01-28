@@ -1,49 +1,89 @@
 <script setup>
-import Project from "./components/Project.vue";
+import Carousel from "./components/Carousel.vue";
 import {projects} from "./data/projects.js";
+import {useTranslations} from "@/composables/useTranslations.js";
 
+
+const {translation} = useTranslations();
 </script>
 
 
 <template>
 	<div class="section-2-content">
-		<div class="top">
+		<header>
 			<h1>Projects</h1>
-		</div>
+		</header>
 
-		<div class="mid">
-			<div class="projects-container">
-				<Project class="project" v-for="(project, index) in projects" :project="project">
-				</Project>
+		<main>
+			<div class="carousel-container">
+				<div class="top">
+					<h3>
+						myMovielist
+					</h3>
+
+					<Button as="a" href="https://bytom.dev/mymovielist/" target="_blank" variant="link">Visit myMovielist</Button>
+				</div>
+
+				<Carousel :items="projects.myMovielist"></Carousel>
 			</div>
-		</div>
+		</main>
+
+		<footer>
+			<div class="more-soon">
+				{{translation.section2.moreSoon}}
+			</div>
+		</footer>
 	</div>
 </template>
 
 
 <style scoped>
-.top {
+.section-2-content {
+	justify-content: space-around;
+}
+
+header {
 	display: flex;
 	justify-content: center;
 }
 
-.mid {
+main {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 }
 
-.projects-container {
-	max-width: 800px;
+footer {
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 2rem;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding-bottom: 2rem;
 }
 
-.project {
-	width: 20%;
-	min-width: 280px;
-	padding: 1rem;
-	background-color: var(--card-bg);
+.carousel-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
+
+	.top {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.p-carousel {
+		width: 100%;
+	}
+}
+
+@media(max-width: 1400px) {
+	.carousel-container {
+		width: 100%;
+		max-width: 800px;
+	}
 }
 </style>

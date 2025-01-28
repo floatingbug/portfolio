@@ -10,6 +10,7 @@ import Aura from "@primevue/themes/aura";
 import { definePreset } from '@primevue/themes';
 import semantic from "./theming/semantic.js";
 import Button from "primevue/button";
+import Divider from "primevue/divider";
 
 
 const app = createApp(App);
@@ -30,5 +31,6 @@ app.use(PrimeVue, {
 app.use(router);
 
 app.component("Button", Button);
+app.component("Divider", Divider);
 
 app.mount("#app");

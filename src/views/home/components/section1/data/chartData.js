@@ -1,14 +1,10 @@
 import {ref} from "vue";
 
 
-export const chartData = ref([
+const frontEnd = ref([
 	{
 		label: "JavaScript",
 		percent: 95,
-	},
-	{
-		label: "Node.js",
-		percent: 90,
 	},
 	{
 		label: "HTML",
@@ -23,3 +19,28 @@ export const chartData = ref([
 		percent: 90,
 	},
 ]);
+
+const backEnd = ref([
+	{
+		label: "JavaScript",
+		percent: 95,
+	},
+	{
+		label: "Node.js",
+		percent: 90,
+	},
+	{
+		label: "Express.js",
+		percent: 90,
+	},
+	{
+		label: "MongoDB",
+		percent: 80,
+	},
+]);
+
+
+export const chartData = {
+	frontEnd,
+	backEnd,
+};

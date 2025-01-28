@@ -1,15 +1,16 @@
 <script setup>
-import HeroSection from "./components/HeroSection.vue";
+import HeroSection from "./components/heroSection/HeroSection.vue";
 import Section1 from "./components/section1/Section1.vue";
 import Section2 from "./components/section2/Section2.vue";
 import Section3 from "./components/section3/Section3.vue";
+import Footer from "./components/footer/Footer.vue";
 
 
 </script>
 
 <template>
 	<div class="hero-container" id="hero">
-		<HeroSection class="hero-section"></HeroSection>
+		<HeroSection class=""></HeroSection>
 	</div>
 
 	<div class="section-container" id="section-1">
@@ -20,12 +21,12 @@ import Section3 from "./components/section3/Section3.vue";
 		<Section2 class="section"></Section2>
 	</div>
 
-	<div id="section-3" class="section-container">
+	<div id="section-3" class="section-container last-section">
 		<Section3 class="section"></Section3>
 	</div>
 
 	<div id="footer" class="footer-container">
-
+		<Footer></Footer>
 	</div>
 </template>
 
@@ -35,7 +36,7 @@ import Section3 from "./components/section3/Section3.vue";
 	min-height: 100dvh;
 	display: flex;
 	justify-content: center;
-	background-color: var(--hero-bg);
+	border-bottom: 1px solid var(--p-primary-color);
 }
 
 .section {
@@ -61,11 +62,23 @@ import Section3 from "./components/section3/Section3.vue";
 	background-size: cover;
 }
 
-.hero-section {
-	width: 90%;
-	max-width: 1200px;
-	height: 50%;
-	min-height: 600px;
+/* Section 2 */
+
+#section-2 {
+	background-color: var(--section-bg);
+}
+
+.last-section {
+	border-bottom: none;
+}
+
+
+/* Footer */
+.footer-container {
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+	border-top: 1px solid var(--p-primary-color);
 	margin-top: 2rem;
 }
 </style>
