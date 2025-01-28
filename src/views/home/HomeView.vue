@@ -58,7 +58,7 @@ import Footer from "./components/footer/Footer.vue";
 	justify-content: center;
 	align-items: center;
 	background-color: var(--hero-bg);
-	background-image: url(/src/assets/img/hero_bg.svg);
+	background-image: url(/img/hero_bg.svg);
 	background-size: cover;
 }
 
