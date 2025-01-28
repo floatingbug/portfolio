@@ -23,22 +23,22 @@ export const translations = {
 						instruction: "Watcht slides for screenshoots and further descriptions.",
 					},
 					slide2: {
-						imgUrl: "/src/assets/img/project_screenshoots/mymovielist/discover_movies.png",
+						imgUrl: "/img/project_screenshoots/mymovielist/discover_movies.png",
 						header: "Discover Movies",
 						description: "Discover movies based on selected criteria in the filter."
 					},
 					slide3: {
-						imgUrl: "/src/assets/img/project_screenshoots/mymovielist/public_lists.png",
+						imgUrl: "/img/project_screenshoots/mymovielist/public_lists.png",
 						header: "Public Lists",
 						description: "View public movie lists from other users.",
 					},
 					slide4: {
-						imgUrl: "/src/assets/img/project_screenshoots/mymovielist/rating_and_overview.png",
+						imgUrl: "/img/project_screenshoots/mymovielist/rating_and_overview.png",
 						header: "Ratings and Movie Overview",
 						description: "See how users have rated the respective movie and view details about it.",
 					},
 					slide5: {
-						imgUrl: "/src/assets/img/project_screenshoots/mymovielist/devices.png",
+						imgUrl: "/img/project_screenshoots/mymovielist/devices.png",
 						header: "Responsive",
 						description: "The layout adapts to the respective device.",
 					},
@@ -83,22 +83,22 @@ export const translations = {
 						instruction: "Watcht slides for screenshoots and further descriptions.",
 					},
 					slide2: {
-						imgUrl: "/src/assets/img/project_screenshoots/mymovielist/discover_movies.png",
+						imgUrl: "/img/project_screenshoots/mymovielist/discover_movies.png",
 						header: "Entdecke Filme",
 						description: "Entecke Filme nach ausgewählten Kritärien im Filter.",
 					},
 					slide3: {
-						imgUrl: "/src/assets/img/project_screenshoots/mymovielist/public_lists.png",
+						imgUrl: "/img/project_screenshoots/mymovielist/public_lists.png",
 						header: "Öffentliche Listen",
 						description: "Betrachte öffentliche Film Listen von anderen Benutzern.",
 					},
 					slide4: {
-						imgUrl: "/src/assets/img/project_screenshoots/mymovielist/rating_and_overview.png",
+						imgUrl: "/img/project_screenshoots/mymovielist/rating_and_overview.png",
 						header: "Bewertungen und Film Übersicht",
 						description: "Betrachte wie Benutzer den jeweiligen Film bewertet haben und sie dir Details über den Film an.",
 					},
 					slide5: {
-						imgUrl: "/src/assets/img/project_screenshoots/mymovielist/devices.png",
+						imgUrl: "/img/project_screenshoots/mymovielist/devices.png",
 						header: "Responsive",
 						description: "Das Layout passt sich dem jeweiligen Gerät an.",
 					},

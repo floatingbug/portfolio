@@ -34,7 +34,7 @@ const props = defineProps({
 			<Divider></Divider>
 
 			<div class="bottom">
-				<img src="/src/assets/img/developer.svg" alt="">
+				<img src="/img/developer.svg" alt="">
 			</div>
 		</div>
 	</div>

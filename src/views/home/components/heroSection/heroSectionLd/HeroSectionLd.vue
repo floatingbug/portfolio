@@ -37,7 +37,7 @@ const props = defineProps({
 			<Divider layout="vertical"></Divider>
 
 			<div class="right">
-				<img src="/src/assets/img/developer.svg" alt="">
+				<img src="/img/developer.svg" alt="">
 			</div>
 		</div>
 	</div>
