@@ -7,7 +7,6 @@ import InputText from "primevue/inputtext";
 import Textarea from 'primevue/textarea';
 import {useTranslations} from "@/composables/useTranslations.js";
 import {sendMessage} from  "./helpers/sendMessage.js";
-import { RecaptchaV2 } from "vue3-recaptcha-v2";
 
 
 const {translation} = useTranslations();
