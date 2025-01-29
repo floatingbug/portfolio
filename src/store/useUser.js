@@ -1,8 +1,8 @@
 import { reactive } from "vue";
 
 const userSettings = reactive({
-	isDarkMode: false,
-	lang: "de"
+	isLightMode: false,
+	lang: "en"
 });
 
 export function useUser() {

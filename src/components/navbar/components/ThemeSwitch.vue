@@ -1,28 +1,36 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import ToggleSwitch from "primevue/toggleswitch";
 import { useUser } from "@/store/useUser.js";
 
+
 const { setUserSettings, userSettings } = useUser();
+const isChecked = ref(true);
+
+
+onMounted(() => {
+	isChecked.value = userSettings.isLightMode ? false : true;
+});
+
 
 function handleChangeAction(isChecked) {
 	const html = document.documentElement;
 
-	if (isChecked) {
-		localStorage.setItem("isDarkMode", true);
-		html.className = "dark-mode";
-	} else {
-		localStorage.setItem("isDarkMode", false);
+	if (!isChecked) {
+		localStorage.setItem("isLightMode", true);
 		html.classList.remove("dark-mode");
+	} else {
+		localStorage.setItem("isLightMode", false);
+		html.className = "dark-mode";
 	}
 
-	setUserSettings({ isDarkMode: isChecked });
+	setUserSettings({ isLightMode: !isChecked });
 }
 </script>
 
 <template>
 	<ToggleSwitch
-		v-model="userSettings.isDarkMode"
+		v-model="isChecked"
 		@update:modelValue="handleChangeAction"
 	>
 		<template #handle="{ checked }">

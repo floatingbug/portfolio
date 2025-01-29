@@ -1,7 +1,11 @@
 <script setup>
+import {onMounted} from "vue";
 import Carousel from "./components/Carousel.vue";
-import {projects} from "./data/projects.js";
+import {useProjects} from "./data/projects.js";
 import {useTranslations} from "@/composables/useTranslations.js";
+
+
+const {projects} = useProjects();
 
 
 const {translation} = useTranslations();
@@ -24,7 +28,8 @@ const {translation} = useTranslations();
 					<Button as="a" href="https://bytom.dev/mymovielist/" target="_blank" variant="link">Visit myMovielist</Button>
 				</div>
 
-				<Carousel :items="projects.myMovielist"></Carousel>
+
+				<Carousel :items="projects"></Carousel>
 			</div>
 		</main>
 

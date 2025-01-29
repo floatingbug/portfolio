@@ -11,8 +11,6 @@ const isNavbarClosed = ref(true);
 
 
 function handleNavbarAction(event){
-	console.log("test", event);
-
 	if(event.action === "toggle"){
 		isNavbarClosed.value = !isNavbarClosed.value;
 	}

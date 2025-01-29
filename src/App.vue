@@ -21,11 +21,15 @@ onMounted(async () => {
 	setTranslation(currLang);
 
 	//handle dark-mode
-	const isDarkMode = localStorage.getItem("isDarkMode");
+	const isLightMode = localStorage.getItem("isLightMode");
 
-	if (isDarkMode === true || isDarkMode === "true") {
+	if (isLightMode === true || isLightMode === "true") {
+		html.classList.remove("dark-mode");
+		userSettings.isLightMode = true;
+	}
+	else{
 		html.className = "dark-mode";
-		userSettings.isDarkMode = true;
+		userSettings.isLightMode = false;
 	}
 
 	//handle device size

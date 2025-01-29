@@ -61,26 +61,26 @@ export const translations = {
 	},
 	de: {
 		heroSection: {
-			header1: "Hallo ich bin ein",
-			header2: "Fullstack Web-Developer.",
-			aboutText: "Hi, ich bin Thomas Hof, ein leidenschaftlicher Fullstack Webentwickler aus Deutschland.",
+			header1: "Hallo, ich bin ein",
+			header2: "Fullstack-Webentwickler.",
+			aboutText: "Hi, ich bin Thomas Hof, ein leidenschaftlicher Fullstack-Webentwickler aus Deutschland.",
 		},
 		section1: {
 			header1: "<span style='color: var(--p-primary-color);'>#</span> Wer bin ich?",
 			about: {
-				p1: "Hallo, mein Name ist Thomas, aber jeder nennt mich Tom. Ich Beschäftige mich schon seit vielen Jahren mit der Web Entwicklung und die Leidenschaft ",
-				p2: "Die ersten Zeilen Code die ich vor langer Zeit geschrieben hatte, waren in C. Damals Programmierte ich einige Spiele sowohl in C als auch in C++. Ich wollte diese Spiele auf einer Web Seite vorstellen und so kam ich zur Web Entwicklung. Ich begann mich mit allen Aspenkten der Web Entwicklung auseinander zu setzen, bspw. wie das Domain-Name System oder das Internet funktioniert. Sowohl die technischen Aspekte als auch das Entwickeln selbst im Berreich der Web Entwicklung begeistern mich bis heute und wird es auch weiterhin.",
+				p1: "<h1 style='display: inline-block'>H</h1>allo, mein Name ist Thomas, aber jeder nennt mich Tom. Ich Beschäftige mich schon seit vielen Jahren mit der Webentwicklung und die Leidenschaft treibt mich weiter voran.",
+				p2: "Die ersten Zeilen Code die ich vor langer Zeit geschrieben hatte, waren in C. Damals programmierte ich einige Spiele sowohl in C als auch in C++. Ich wollte diese Spiele auf einer Webseite vorstellen und so kam ich zur Webentwicklung. Ich begann mich mit allen Aspekten der Webentwicklung auseinander zu setzen, bspw. wie das Domain-Name System oder das Internet funktioniert. Sowohl die technischen Aspekte, als auch das Entwickeln selbst im Bereich der Webentwicklung begeistern mich bis heute und wird es auch weiterhin.",
 			},
-			header2: "<span style='color: var(--p-primary-color);'>#</span> Technologien und skills",
-			description: "Es gibt natürlich noch eine Menge weiterer Technologien und Kenntnisse wie die Shell in Unix basierten Systemen oder generell der Bereich devOps. Weil es zu umfangreich wäre, alle zu erwähnen, habe ich nur die wichtigsten aufgelistet.",
+			header2: "<span style='color: var(--p-primary-color);'>#</span> Technologien und Skills",
+			description: "Es gibt natürlich noch eine Menge weiterer Technologien und Kenntnisse, wie die Shell in Unix-basierten Systemen oder generell der Bereich devOps. Weil es zu umfangreich wäre, alle zu erwähnen, habe ich nur die Wichtigsten aufgelistet.",
 		},
 		section2: {
-			moreSoon: "Weiter Projekte folgen.",
+			moreSoon: "Weitere Projekte folgen.",
 			projects: {
 				myMovielist: {
 					slide1: {
-						description : "On myMovielist, you can add movies to your watchlist, discover movies and add them to your movie lists, watch movie lists from other users, and more.",
-						instruction: "Watcht slides for screenshoots and further descriptions.",
+						description : "Auf myMovielist können sie Filme zu ihrer Watchlist hinzufügen, neue Filme entdecken und zu ihrer Filmlisten hinzufügen, Filmlisten anderer Nutzer ansehen und vieles mehr.",
+						instruction: "Sehen sie sich die slides für screenshoots und weitere Beschreibungen an.",
 					},
 					slide2: {
 						imgUrl: "/img/project_screenshoots/mymovielist/discover_movies.png",
