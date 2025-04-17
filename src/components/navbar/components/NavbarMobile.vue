@@ -91,24 +91,15 @@ function closeNavbar(event){
 				
 				<ul class="bottom">
 					<li>
-						<Button 
-							as="a"
-							to=""
-							variant="text"
-						>
+						<Button as="a" href="https://github.com/floatingbug" target="_blank" variant="text">
 							<i class="pi pi-github" style="font-size: 1.4rem; color: var(--p-amber-500)"></i>
 						</Button>
 						
-						<Button 
-							as="a"
-							href="https://www.linkedin.com/in/thomas-hof-a9a40a317/"
-							target="_blank"
-							variant="text"
-						>
+						<Button as="a" href="https://www.linkedin.com/in/thomas-hof-a9a40a317/" target="_blank" variant="text">
 							<i class="pi pi-linkedin" style="font-size: 1.4rem; color: var(--p-amber-500)"></i>
 						</Button>
 						
-						<Button variant="text">
+						<Button as="a" href="https://www.facebook.com/profile.php?id=61572414130134" target="_blank" variant="text">
 							<i class="pi pi-facebook" style="font-size: 1.4rem; color: var(--p-amber-500)"></i>
 						</Button>
 					</li>
@@ -202,7 +193,7 @@ ul {
 .top-right {
 	width: 20%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 }
 

@@ -50,15 +50,15 @@ const {activeButtons, activateButton} = useActiveButtons();
 			</div>
 
 			<div class="bottom">
-				<Button variant="text">
+				<Button as="a" href="https://github.com/floatingbug" target="_blank" variant="text">
 					<i class="pi pi-github" style="font-size: 1.4rem; color: var(--p-amber-500)"></i>
 				</Button>
 				
-				<Button variant="text">
+				<Button as="a" href="https://www.linkedin.com/in/thomas-hof-a9a40a317/" target="_blank" variant="text">
 					<i class="pi pi-linkedin" style="font-size: 1.4rem; color: var(--p-amber-500)"></i>
 				</Button>
 				
-				<Button variant="text">
+				<Button as="a" href="https://www.facebook.com/profile.php?id=61572414130134" target="_blank" variant="text">
 					<i class="pi pi-facebook" style="font-size: 1.4rem; color: var(--p-amber-500)"></i>
 				</Button>
 			</div>
