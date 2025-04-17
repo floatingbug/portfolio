@@ -6,4 +6,4 @@ const device = reactive({
 });
 
 
-export {device};
+export default device;

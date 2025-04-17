@@ -9,15 +9,19 @@ import PrimeVue from "primevue/config";
 import Aura from "@primevue/themes/aura";
 import { definePreset } from '@primevue/themes';
 import semantic from "./theming/semantic.js";
+import components from "./theming/components.js";
 import Button from "primevue/button";
 import Divider from "primevue/divider";
+import ToastService from 'primevue/toastservice';
 
 
 const app = createApp(App);
 
 const customizedTheme = definePreset(Aura, {
 	semantic,
+	components,
 });
+
 
 app.use(PrimeVue, {
 	theme: {
@@ -28,6 +32,7 @@ app.use(PrimeVue, {
 	},
 });
 
+app.use(ToastService);
 app.use(router);
 
 app.component("Button", Button);
