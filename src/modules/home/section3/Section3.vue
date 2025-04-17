@@ -21,6 +21,7 @@ const toast = useToast();
 const captchaKey = ref(import.meta.env.VITE_CAPTCHA_KEY);
 const errorMessage = ref("");
 const isProgress = ref(false);
+const showPrivacyNote = ref(false);
 
 
 onMounted(() => {
@@ -126,6 +127,19 @@ async function sendEmail(){
 						
 						<div v-if="errorMessage" class="error-message">
 							{{errorMessage}}
+						</div>
+
+						<div class="privacy-note">
+							By submitting the form, you agree that your data will be used to process your request. For more information, please see the 
+							<Button
+								as="router-link"
+								to="/legal-notice"
+								variant="link"
+								style="padding: 0;"
+								@click="showPrivacyNote = true;"
+							>
+								privacy policy
+							</Button>.
 						</div>
 				
 						<div class="submit-button">

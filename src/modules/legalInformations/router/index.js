@@ -1,5 +1,5 @@
-import PrivacyPolicyView from "../PrivacyPolicyView.vue";
-import TermsOfUseView from "../TermsOfUseView.vue";
+import PrivacyPolicyView from "../components/PrivacyPolicy.vue";
+import LegalNotice from "../components/LegalNotice.vue";
 
 
 const legalInformationRoutes = [
@@ -9,9 +9,9 @@ const legalInformationRoutes = [
 		component: PrivacyPolicyView
 	},
 	{
-		path: "/terms-of-use",
-		name: "termsOfUse",
-		component: TermsOfUseView
+		path: "/legal-notice",
+		name: "legalNotice",
+		component: LegalNotice, 
 	}
 ];
 

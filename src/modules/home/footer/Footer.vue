@@ -16,7 +16,7 @@
 			
 			<div class="right">
 				<div class="termsOfUse">
-					<Button as="router-link" to="/terms-of-use" variant="link">Terms of Use</Button>
+					<Button as="router-link" to="/legal-notice" variant="link">Legal Notice</Button>
 				</div>
 			
 				<div class="privacyPolicy">
@@ -36,6 +36,8 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	padding: 2rem;
+	background-color: var(--bg-color);
 }
 
 .container-left {

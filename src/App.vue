@@ -6,6 +6,7 @@ import { useUser } from "./store/useUser.js";
 import device from "./composables/device.js";
 import {useActiveButtons} from "@/composables/useActiveButtons.js";
 import Toast from 'primevue/toast';
+import Footer from "./modules/home/footer/Footer.vue";
 
 
 const {userSettings} = useUser();
@@ -76,6 +77,7 @@ function scrollToTop(){
 
 
 	<RouterView />
+	<Footer></Footer>
 </template>
 
 <style scoped>
