@@ -20,6 +20,34 @@ import device from "@/composables/device.js";
 				<p class="hero-description">
 					Hi, I'm a self-taught web developer from Germany, creating web applications with passion.
 				</p>
+				<div class="hero-main-social-links">
+					<Button
+						as="a" 
+						href="https://github.com/floatingbug"
+						target="_blank"
+						variant="text"
+					>
+						<i class="pi pi-github" style="color: var(--color-contrast); font-size: 1.2rem;"></i>
+					</Button>
+					
+					<Button
+						as="a" 
+						href="https://www.linkedin.com/in/thomas-hof-a9a40a317/"
+						target="_blank"
+						variant="text"
+					>
+						<i class="pi pi-linkedin" style="color: var(--color-contrast); font-size: 1.2rem;"></i>
+					</Button>
+					
+					<Button
+						as="a" 
+						href="https://www.facebook.com/profile.php?id=61572414130134"
+						target="_blank"
+						variant="text"
+					>
+						<i class="pi pi-facebook" style="color: var(--color-contrast); font-size: 1.2rem;"></i>
+					</Button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -60,6 +88,16 @@ import device from "@/composables/device.js";
 	.hero-description {
 		max-width: 300px;
 		margin-top: 1rem;
+	}
+
+	.hero-main-social-links {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+
+		.p-button {
+			text-decoration: none;
+		}
 	}
 }
 
