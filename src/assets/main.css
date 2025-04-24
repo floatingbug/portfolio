@@ -24,13 +24,13 @@
 
 .card {
 	border-radius: var(--border-radius-rounded-soft);
-	border: 1px solid var(--border-color);
+	border: 1px solid var(--border-color-light);
 	backdrop-filter: blur(8px);
 	background-color: var(--card-bg-color);
 }
 
 .button-primary {
-	color: var(--p-primary-50) !important;
+	color: var(--p-primary-950) !important;
 	background: linear-gradient(90deg, var(--button-gradient-colors)) !important;
 }
 
@@ -54,14 +54,13 @@
 	min-height: 100dvh;
 	display: flex;
 	justify-content: center;
-	border-bottom: 1px solid var(--border-color);
 	padding: 2rem 0;
 	background-color: var(--bg-color);
 }
 
 .section-content {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1024px;
 }
 
 .divider-color-light.p-divider-horizontal::before {
@@ -69,6 +68,10 @@
 }
 
 @media(min-width: 1024px){
+	.section-content {
+		padding: 5rem 0;
+	}
+
 	.section-header {
 		margin-bottom: 4rem;
 
@@ -78,6 +81,6 @@
 	}
 
 	p, span {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
 }

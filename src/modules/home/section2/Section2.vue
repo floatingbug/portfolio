@@ -30,6 +30,10 @@ import projectsData from "./data/projectsData.js";
 
 
 <style scoped>
+.section-container {
+	background-color: var(--projects-section-bg);
+}
+
 main {
 	margin-top: 2rem;
 	

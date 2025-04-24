@@ -98,10 +98,13 @@ const {activeButtons, activateButton} = useActiveButtons();
 <style scoped>
 nav {
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	display: flex;
 	padding: 1rem 1rem;
 	border-bottom: 1px solid var(--border-color-light);
+	background-color: var(--navbar-desktop-bg);
+	backdrop-filter: blur(8px);
+	z-index: 1000;
 }
 
 .p-button {
@@ -127,10 +130,8 @@ nav {
 	display: flex;
 	align-items: center;
 	font-size: 1.4rem;
-	border-radius: var(--border-radius-rounded-soft);
 	padding: 0 0.5rem;
 	z-index: 1;
-	background-color: var(--p-primary-color);
 }
 
 .label-container .label-background{
@@ -139,7 +140,6 @@ nav {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: linear-gradient(90deg, var(--label-gradient-colors));
 	z-index: 0;
 }
 
@@ -171,7 +171,7 @@ nav {
 	bottom: 0;
     left: 10%;
     height: 3px;
-    background: linear-gradient(to right, transparent, var(--p-primary-color), transparent);
+    background: linear-gradient(to right, transparent, var(--p-amber-500), transparent);
 	border-radius: 2px;
 	transform: scaleX(0);
 	transform-origin: center;

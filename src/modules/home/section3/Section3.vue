@@ -82,10 +82,33 @@ async function sendEmail(){
 				<span>#</span> Contact me
 			</h1>
 
-			<div class="form-container">
-				<div class="form-content" :class="{card: device.size >= 600}">
-					<div class="top">
-						<div class="top-left">
+			<div class="contact">
+				<div class="contact-left">
+					<div class="contact-intro">
+						Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday
+					</div>
+					
+					<div class="contact-informations">
+						<div class="contact-info">
+							<i class="pi pi-map-marker"></i>
+							<span>Rennerod, Germany</span>
+						</div>
+						
+						<div class="contact-info">
+							<i class="pi pi-phone"></i>
+							<span>+49 1522 8958 094</span>
+						</div>
+						
+						<div class="contact-info">
+							<i class="pi pi-envelope"></i>
+							<span>thomas.hof1984@gmail.com</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-right">
+					<div class="contact-form">
+						<div class="contact-form-input">
 							<InputGroup>
 								<InputGroupAddon>
 									<i class="pi pi-comment" style="color: var(--p-amber-500)"></i>
@@ -96,9 +119,7 @@ async function sendEmail(){
 									<label for="subject">Subject</label>
 								</FloatLabel>
 							</InputGroup>
-						</div>
-									
-						<div class="top-right">
+							
 							<InputGroup>
 								<InputGroupAddon>
 									<i class="pi pi-envelope" style="color: var(--p-amber-500)"></i>
@@ -109,40 +130,23 @@ async function sendEmail(){
 									<label for="email">E-Mail</label>
 								</FloatLabel>
 							</InputGroup>
+							
+							<FloatLabel>
+								<Textarea id="message" v-model="contactData.message"></Textarea>
+								<label for="message">Message</label>
+							</FloatLabel>
 						</div>
-					</div>
-					
-					<div class="mid">
-						<FloatLabel>
-							<Textarea id="message" v-model="contactData.message"></Textarea>
-							<label for="message">Message</label>
-						</FloatLabel>
-					</div>
-					
-					
-					<div class="bottom">
-						<div class="captcha-container">
+						
+						
+						<div class="contact-captcha-container">
 							<div class="g-recaptcha" :data-sitekey="captchaKey"></div>
 						</div>
 						
 						<div v-if="errorMessage" class="error-message">
 							{{errorMessage}}
 						</div>
-
-						<div class="privacy-note">
-							By submitting the form, you agree that your data will be used to process your request. For more information, please see the 
-							<Button
-								as="router-link"
-								to="/legal-notice"
-								variant="link"
-								style="padding: 0;"
-								@click="showPrivacyNote = true;"
-							>
-								privacy policy
-							</Button>.
-						</div>
-				
-						<div class="submit-button">
+					
+						<div class="contact-submit-button">
 							<Button @click="sendEmail">Send Message</Button>
 						</div>
 					</div>
@@ -154,99 +158,63 @@ async function sendEmail(){
 
 
 <style scoped>
-.section-container {
-	width: 100%;
-	position: relative;
-	display: flex;
-	justify-content: center;
+.contact {
+	margin-top: 3rem;
+	margin-bottom: 12rem;
 }
 
-.section-content {
-	width: 90%;
-}
-
-.form-container {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	margin-top: 8dvh;
-}
-
-.form-content{
-	width: 100%;
-	max-width: 1024px;
+.contact-informations {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
+	gap: 1rem;
+	margin-top: 4rem;
 
-.top {
-	width: 90%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2rem;
-}
-
-.top-left, .top-right {
-	width: 100%;
-}
-
-.mid {
-	width: 90%;
-	display: flex;
-	justify-content: center;
-	margin-top: 2rem;
-
-
-	.p-floatlabel {
-		width: 100%;
+	.contact-info {
+		span {
+			margin-left: 1rem;
+		}
 	}
+}
+
+.contact-form-input {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 3rem;
 
 	.p-textarea {
 		width: 100%;
 	}
 }
 
-.bottom {
-	width: 90%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
+.contact-captcha-container {
+	margin-top: 2rem;
+}
+
+.contact-submit-button {
 	margin-top: 2rem;
 
 	.p-button {
-		margin-top: 2rem;
-	}
-	
-	.captcha-container {
 		width: 100%;
 	}
+}
 
-	.captcha-container .g-recaptcha {
-		transform:scale(0.77);
-		transform-origin:0 0;
+@media(min-width: 1024px) {
+	.contact {
+		display: flex;
+		gap: 2rem;
+
+		.contact-left, .contact-right {
+			flex: 1;
+		}
 	}
-}
 
-.card {
-	padding: 2rem 0;
-}
-
-.error-message {
-	color: var(--p-red-500);
-}
-
-@media(min-width: 480px) {
-	.mid .p-textarea {
-		min-height: 300px;
+	.contact-form-input {
+		margin-top: 0;
 	}
-}
 
-@media(min-width: 600px) {
-	.top {
-		flex-direction: row;
+	.contact-intro {
+		max-width: 300px;
 	}
 }
 </style>

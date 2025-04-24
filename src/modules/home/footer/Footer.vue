@@ -4,24 +4,22 @@
 
 <template>    
 	<div class="footer">
-		<div class="container-left">
-			<div class="left">
-				<div class="creator">
-					© 2024 Thomas Hof.
-				</div>
-				<div class="contact">
-					Kontakt: thomas.hof1984@gmail.com
-				</div>
+		<div class="footer-copyright">
+			<p>
+				Copyright © 2024. 
+			</p>
+			<p>
+				All rights reserved.
+			</p>
+		</div>
+			
+		<div class="contact-privacys">
+			<div class="termsOfUse">
+				<Button as="router-link" to="/legal-notice" variant="link">Legal Notice</Button>
 			</div>
 			
-			<div class="right">
-				<div class="termsOfUse">
-					<Button as="router-link" to="/legal-notice" variant="link">Legal Notice</Button>
-				</div>
-			
-				<div class="privacyPolicy">
-					<Button as="router-link" to="/privacy-policy" variant="link">Privacy Policy</Button>
-				</div>
+			<div class="privacyPolicy">
+				<Button as="router-link" to="/privacy-policy" variant="link">Privacy Policy</Button>
 			</div>
 		</div>
 	</div>
@@ -31,31 +29,21 @@
 <style scoped>
 .footer {
 	width: 100%;
-	min-width: 280px;
-	height: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	flex-wrap: wrap;
-	padding: 2rem;
+	justify-content: center;
 	background-color: var(--bg-color);
 }
 
-.container-left {
+.footer-copyright {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	gap: 3rem;
-	flex-wrap: wrap;
+}
 
-	.left, .right {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	.right {
-		a {
-			padding: 0;
-		}
-	}
+.contact-privacys {
+	display: flex;
+	justify-content: center;
 }
 </style>

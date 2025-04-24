@@ -1,28 +1,11 @@
-:root {
-	--text-primary-color: var(--p-primary-950);
-
-	--bg-color: var(--p-primary-50);
-	
-	--card-bg-color: rgb(from var(--p-primary-color) r g b / 10%);
-
-	--gradient-colors: var(--p-primary-50), var(--p-primary-50), var(--p-primary-color);
-	--button-gradient-colors: var(--p-primary-500), rgb(from var(--p-purple-500) r g b / 100%);
-	--label-gradient-colors: var(--p-primary-color), var(--p-primary-800), var(--bg-color);
-
-	--section-bg: rgb(19, 26, 52);
-
-	--border-radius-rounded-hard: 3px;
-	--border-radius-rounded-soft: 8px;
-	--border-color: rgb(from var(--p-primary-color) r g b / 100%);
-	--border-color-light: rgb(from var(--p-surface-500) r g b / 30%);
-	
-	--card-bg: rgb(from var(--p-surface-200) r g b / 10%);
-}
-
 .dark-mode {
 	--text-primary-color: var(--p-primary-50);
 
-	--bg-color: var(--p-primary-950);
+	--color-contrast: var(--p-amber-500);
+
+	--bg-color: rgb(from var(--p-primary-950) r g b / 10%);
+	--hero-bg-color: rgb(from var(--p-primary-500) r g b / 10%);
+	--projects-section-bg: rgb(from var(--p-primary-500) r g b / 10%);
 	
 	--card-bg-color: rgb(from var(--p-primary-color) r g b / 10%);
 
@@ -30,6 +13,7 @@
 	--label-gradient-colors: var(--p-primary-color), var(--p-primary-700), var(--p-primary-800), var(--p-primary-900), rgb(from var(--bg-color) r g b / 10%);
 	--label-gradient-colors-flipped: var(--bg-color), var(--p-primary-900), rgb(from var(--p-amber-700) r g b / 50%);
 	--header-gradient-colors: var(--p-primary-900), var(--p-primary-500), var(--bg-color);
+	--button-gradient-colors: rgb(from var(--p-amber-500) r g b / 100%), rgb(from var(--p-primary-300) r g b / 100%);
 
 	--section-bg: rgb(19, 26, 52);
 

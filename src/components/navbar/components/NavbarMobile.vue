@@ -113,8 +113,8 @@ function closeNavbar(event){
 <style scoped>
 nav {
 	width: 100%;
-	position: absolute;
-	z-index: 100;
+	position: fixed;
+	z-index: 5000;
 }
 
 ul {
@@ -133,12 +133,14 @@ ul {
 
 .menu-button-open {
 	position: absolute;
+	right: 0;
 }
 
 .navbar-list-container {
 	width: 100%;
 	height: 100dvh;
 	position: absolute;
+	right: 0;
 	backdrop-filter: blur(8px);
 	background-color: var(--navbar-mobile-bg);
 }
@@ -169,11 +171,8 @@ ul {
 	display: flex;
 	align-items: center;
 	font-size: 1.4rem;
-	color: var(--text-primary-bg);
-	border-radius: 0 var(--border-radius-rounded-soft) var(--border-radius-rounded-soft) 0;
 	padding: 0 1rem;
 	z-index: 1;
-	background-color: var(--p-primary-color);
 }
 
 .label-container .label-background{
@@ -182,7 +181,6 @@ ul {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: linear-gradient(90deg, var(--label-gradient-colors));
 	z-index: 0;
 }
 
@@ -215,5 +213,12 @@ ul {
 
 .navbar-open {
 	transform: translateY(0);
+}
+
+@media(min-width: 480px) {
+	.navbar-list-container {
+		width: 60%;
+		height: 60dvh;
+	}
 }
 </style>

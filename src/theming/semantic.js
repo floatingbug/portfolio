@@ -31,7 +31,7 @@ const semantic = {
 		},
 		dark: {
 			primary: {
-				50: '{indigo.50}',
+				50:  '{indigo.50}',
 				100: '{indigo.100}',
 				200: '{indigo.200}',
 				300: '{indigo.300}',

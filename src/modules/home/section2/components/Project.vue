@@ -40,8 +40,9 @@ const props = defineProps({
 
 <style scoped>
 .project-container {
+	flex: 1;
 	width: 100%;
-	max-width: 500px;
+	min-width: 280px;
 	display: flex;
 	flex-direction: column;
 }
@@ -75,7 +76,7 @@ main {
 	.features {
 		height: 80%;
 		padding: 0 1rem;
-		margin-top: 1rem;
+		margin-top: 2rem;
 
 		h3 {
 			margin-bottom: 0.5rem;

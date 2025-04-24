@@ -1,15 +1,27 @@
 <script setup>
 import device from "@/composables/device.js";
-import MainCardMobile from "./components/MainCardMobile.vue";
-import MainCardDesktop from "./components/MainCardDesktop.vue";
 
 </script>
 
 
 <template>    
 	<div class="hero-container">
-		<MainCardMobile v-if="device.size < 1200"></MainCardMobile>
-		<MainCardDesktop v-else></MainCardDesktop>
+		<div class="hero-main">
+			<div class="hero-image">
+				<div class="image-container">
+					<img src="/public/img/developer.svg" alt="">
+					<div class="image-frame"></div>
+				</div>
+			</div>
+		
+			<div class="hero-main-head">
+				<p class="hero-intro">Thomas Hof</p>
+				<h1 class="hero-title">Full Stack Web Developer</h1>
+				<p class="hero-description">
+					Hi, I'm a self-taught web developer from Germany, creating web applications with passion.
+				</p>
+			</div>
+		</div>
 	</div>
 </template>   
 
@@ -21,8 +33,105 @@ import MainCardDesktop from "./components/MainCardDesktop.vue";
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border-bottom: 1px solid var(--border-color);
-	background: linear-gradient(120deg, var(--gradient-colors));
+	justify-content: center;
+	background-color: var(--hero-bg-color);
 }
 
+.hero-main {
+	width: 90%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+}
+
+.hero-main-head {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10%;
+
+	.hero-intro {
+		color: var(--color-contrast);
+	}
+
+	.hero-title {
+		margin-top: 1rem;;
+	}
+
+	.hero-description {
+		max-width: 300px;
+		margin-top: 1rem;
+	}
+}
+
+.hero-image {
+	display: flex;
+	justify-content: center;
+
+	.image-container {
+		width: 90%;
+		position: relative;
+		z-index: 2;
+	}
+
+	img {
+		width: 100%;
+		position: relative;
+		z-index: 1;
+	}
+
+	.image-frame {
+		width: 80%;
+		height: 80%;
+		position: absolute;
+		top: 15%;
+		left: 15%;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		border-radius: var(--border-radius-rounded-soft);
+		border: 4px solid var(--color-contrast);
+	}
+}
+
+@media(min-width: 480px) {
+	.hero-main-head {
+		.hero-intro {
+			font-size: 1.2rem;
+		}
+
+		.hero-title {
+			font-size: 3rem;
+		}
+
+		.hero-description {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+@media(min-width: 1024px) {
+	.hero-main {
+		flex-direction: row-reverse;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.hero-main-head {
+		margin: 0;
+		
+		.hero-title {
+		}
+	}
+}
+
+@media(min-width: 1360px) {
+	.hero-main-head {
+		.hero-intro {
+		}
+
+
+		.hero-description {
+		}
+	}
+}
 </style>

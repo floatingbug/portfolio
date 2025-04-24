@@ -6,7 +6,7 @@ const props = defineProps({
 
 
 <template>    
-	<div class="container card">
+	<div class="container">
 		<header>
 			<slot name="header"></slot>
 		</header>
@@ -44,15 +44,22 @@ main {
 }
 
 .chart-row {
+	height: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 1rem;
 	border-radius: var(--border-radius-rounded-soft);
-	border: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
+	border-left: 1px solid var(--border-color);
 }
 
 .line-indicator {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	padding: 0.1rem 0.5rem;
 	border-radius: var(--border-radius-rounded-soft);
-	padding: 0.4rem 0.5rem;
 	background-color: var(--chart-line-indicator);
 }
 

@@ -31,13 +31,13 @@ import Chart from "./components/Chart.vue";
 					<div class="chart-container">
 						<Chart :data="chartData.frontEnd">
 							<template #header>
-								<h1 style="color: var(--p-amber-500);">Front End</h1>
+								<h3 style="color: var(--p-amber-500);">Front End</h3>
 							</template>
 						</Chart>
 					
 						<Chart :data="chartData.backEnd">
 							<template #header>
-								<h1 style="color: var(--p-amber-500);">Back End</h1>
+								<h3 style="color: var(--p-amber-500);">Back End</h3>
 							</template>
 						</Chart>
 					</div>
