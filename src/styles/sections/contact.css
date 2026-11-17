@@ -1,0 +1,54 @@
+.contact-section {
+  padding-block: 115px 95px;
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(30px, 6vw, 65px);
+  border: 1px solid #3a4030;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(ellipse at 95% 0%, rgb(197 243 106 / 9%), transparent 38%),
+    linear-gradient(130deg, #1a1d15, #141510 65%);
+}
+
+.contact-card h2 {
+  margin-bottom: 18px;
+}
+
+.contact-card > p {
+  max-width: 540px;
+  margin-bottom: 26px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.contact-decoration {
+  position: absolute;
+  right: 28px;
+  bottom: 25px;
+  color: rgb(197 243 106 / 25%);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 620px) {
+  .contact-section {
+    padding-block: 85px 70px;
+  }
+
+  .contact-decoration {
+    position: static;
+    display: block;
+    margin-top: 35px;
+    line-height: 1.6;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

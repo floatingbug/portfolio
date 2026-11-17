@@ -1,0 +1,9 @@
+.project-count {
+  padding-bottom: 5px;
+}
+
+@media (max-width: 620px) {
+  .project-count {
+    display: none;
+  }
+}
