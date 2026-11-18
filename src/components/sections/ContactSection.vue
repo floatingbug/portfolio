@@ -12,8 +12,7 @@ import { Github, Mail } from 'lucide-vue-next'
         Webprojekt? Ich freue mich darauf, dich kennenzulernen.
       </p>
       <div class="contact-actions">
-        <!-- TODO: Vor dem Veröffentlichen durch deine öffentliche Kontakt-E-Mail ersetzen. -->
-        <a class="button button-primary" href="mailto:DEINE-EMAIL@example.com">
+        <a class="button button-primary" href="mailto:thomas.hof1984@gmail.com">
           E-Mail schreiben <Mail :size="16" />
         </a>
         <a

@@ -22,15 +22,29 @@ npm run preview
 src/
 ├── App.vue
 ├── main.js
+├── router/
+│   └── index.js
+├── views/
+│   ├── PortfolioView.vue
+│   └── CaseStudyView.vue
 ├── components/
 │   ├── SiteHeader.vue
 │   ├── SiteFooter.vue
+│   ├── case-study/
+│   │   ├── CaseStudyHero.vue
+│   │   ├── CaseStudyToc.vue
+│   │   ├── CaseStudySection.vue
+│   │   ├── CaseStudyFigure.vue
+│   │   ├── CaseStudyCallout.vue
+│   │   └── sections/
 │   └── sections/
 │       ├── HeroSection.vue
 │       ├── ProjectSection.vue
 │       ├── ApproachSection.vue
 │       ├── AboutSection.vue
 │       └── ContactSection.vue
+├── data/
+│   └── case-study.js
 └── styles/
     ├── main.css
     ├── tokens.css
@@ -42,8 +56,23 @@ src/
         ├── project.css
         ├── approach.css
         ├── about.css
-        └── contact.css
+        ├── contact.css
+        └── case-study.css
 ```
+
+## Case Study
+
+Die Case Study zu einfachRechnung liegt unter `/case-study/einfach-rechnung/`. Der Inhalt ist als Vue-View mit eigenen Komponenten umgesetzt; die Screenshots kommen aus `projects/einfach_rechnung/screenshots/` und werden über Vite eingebunden.
+
+Das Markdown unter `projects/einfach_rechnung/docs/case-study/case-study.md` dient als Archivfassung. Inhaltliche Änderungen gehören in `src/components/case-study/sections/`.
+
+## Weitere Projekte
+
+`projects/einfach_rechnung/` enthält die Archivfassung der Case Study und die Screenshots der vorgestellten Anwendung. Es ist kein eigenständig startbares Projekt.
+
+## Routing
+
+Die Seite nutzt `vue-router` mit History-Modus. Für den Produktivbetrieb ist ein SPA-Fallback nötig; `vercel.json` und `public/_redirects` decken Vercel und Netlify ab.
 
 ## CSS-Aufteilung
 
@@ -56,6 +85,4 @@ src/
 
 ## Vor dem Veröffentlichen
 
-1. In `src/components/sections/ContactSection.vue` `DEINE-EMAIL@example.com` durch deine Kontaktadresse ersetzen.
-2. In `ProjectSection.vue` die schematische Projektvorschau durch einen echten Screenshot ersetzen, sobald du einen aufgenommen hast.
-3. Inhalte und Technologien darauf prüfen, dass sie den tatsächlichen Funktionen des Projekts entsprechen.
+1. Inhalte und Technologien darauf prüfen, dass sie den tatsächlichen Funktionen des Projekts entsprechen.

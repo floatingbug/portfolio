@@ -1,9 +1,10 @@
 <script setup>
 import {
-  Check, ExternalLink, FileDown, FileText, Github, Layers3, Users, Workflow,
+  ArrowRight, ExternalLink, FileDown, FileText, Github, Users, Workflow,
 } from 'lucide-vue-next'
+import { screenshots } from '../../data/case-study.js'
 
-const stack = ['Vue 3', 'PrimeVue', 'Node.js', 'Express', 'MongoDB', 'JWT']
+const stack = ['Vue 3', 'PrimeVue', 'Pinia', 'Node.js', 'Express 5', 'MongoDB', 'JWT']
 
 const features = [
   {
@@ -56,16 +57,19 @@ const features = [
             Eigenständig entwickelt – vom Frontend bis zum Deployment.
           </p>
           <div class="project-actions">
+            <RouterLink class="button button-primary" to="/case-study/einfach-rechnung">
+              Case Study lesen <ArrowRight :size="16" />
+            </RouterLink>
             <a
-              class="button button-primary"
+              class="button button-secondary"
               href="https://einfach-rechnung-eight.vercel.app/"
               target="_blank"
               rel="noreferrer"
             >
-              Live-Demo öffnen <ExternalLink :size="15" />
+              Live-Demo <ExternalLink :size="15" />
             </a>
             <a
-              class="button button-secondary"
+              class="button-text"
               href="https://github.com/floatingbug/einfachRechnung"
               target="_blank"
               rel="noreferrer"
@@ -79,33 +83,16 @@ const features = [
           <div class="preview-browser">
             <div class="browser-controls"><i></i><i></i><i></i></div>
             <div class="browser-address">einfach-rechnung-eight.vercel.app</div>
-            <div class="preview-placeholder">
-              <div class="preview-sidebar">
-                <span class="preview-brand"><FileText :size="14" /> einfachRechnung</span>
-                <span class="preview-nav active"><Layers3 :size="13" /> Übersicht</span>
-                <span class="preview-nav"><Users :size="13" /> Kunden</span>
-                <span class="preview-nav"><FileText :size="13" /> Angebote</span>
-                <span class="preview-nav"><FileDown :size="13" /> Rechnungen</span>
-              </div>
-              <div class="preview-content">
-                <div class="preview-content-head">
-                  <span><small>WORKSPACE</small><strong>Dokumente</strong></span>
-                  <span class="preview-add">+ Neu erstellen</span>
-                </div>
-                <div class="preview-stat-row">
-                  <div class="preview-stat"><small>ANGEBOTE</small><b>—</b><span>Dokumente</span></div>
-                  <div class="preview-stat"><small>RECHNUNGEN</small><b>—</b><span>Dokumente</span></div>
-                </div>
-                <div class="preview-table">
-                  <div class="preview-table-head"><span>Dokument</span><span>Status</span><span>Datum</span></div>
-                  <div class="preview-table-row"><span><i class="doc-dot"></i> Angebot</span><span class="preview-pill">Entwurf</span><span>—</span></div>
-                  <div class="preview-table-row"><span><i class="doc-dot doc-dot-alt"></i> Rechnung</span><span class="preview-pill">Entwurf</span><span>—</span></div>
-                  <div class="preview-table-row"><span><i class="doc-dot"></i> Angebot</span><span class="preview-pill">Entwurf</span><span>—</span></div>
-                </div>
-              </div>
-            </div>
+            <img
+              class="preview-image"
+              :src="screenshots.dashboard.src"
+              :alt="screenshots.dashboard.alt"
+              :width="screenshots.dashboard.width"
+              :height="screenshots.dashboard.height"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
-          <p class="preview-note"><span class="status-dot"></span> Schematische Vorschau – durch echten App-Screenshot ersetzen</p>
         </div>
       </div>
 

@@ -4,7 +4,7 @@
 }
 
 .site-shell {
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .section-wrap {
@@ -123,7 +123,12 @@
 }
 
 .back-top {
+  padding: 0;
+  border: 0;
+  background: none;
   color: #c4c6bb;
+  font: inherit;
+  cursor: pointer;
   transition: color 160ms ease;
 }
 
